@@ -63,6 +63,8 @@ public class Catalogue {
 				System.out.println("Insert the name of your smartphone: ");
 				String name = sc.nextLine();
 				
+				sc.nextLine();
+				
 				System.out.println("Insert the description of your smartphone: ");
 				String description = sc.nextLine();			
 				
@@ -74,8 +76,10 @@ public class Catalogue {
 				
 				Smartphone userPhone = new Smartphone(name, description, price, ram);
 				
+				arraySmartphone[x] = userPhone;
 				System.out.println(userPhone);
 			}
+			System.out.println(Arrays.toString(arraySmartphone));
 		}
 		
 		if (userAnswer.toLowerCase().equals("television")) {
