@@ -57,7 +57,6 @@ public class Catalogue {
 			
 			Smartphone[] arraySmartphone = new Smartphone[3];
 			
-			
 			for (int x = 0; x < arraySmartphone.length; x++) {
 				
 				System.out.println("Insert the name of your smartphone: ");
@@ -77,17 +76,68 @@ public class Catalogue {
 				Smartphone userPhone = new Smartphone(name, description, price, ram);
 				
 				arraySmartphone[x] = userPhone;
-				System.out.println(userPhone);
 			}
 			System.out.println(Arrays.toString(arraySmartphone));
 		}
 		
 		if (userAnswer.toLowerCase().equals("television")) {
-			System.out.println("hello");
+			
+			Television[] arrayTv = new Television[3];
+			
+			for (int x = 0; x < arrayTv.length; x++) {
+				
+				System.out.println("Insert the name of your television: ");
+				String name = sc.nextLine();
+				
+				sc.nextLine();
+				
+				System.out.println("Insert the description of your television: ");
+				String description = sc.nextLine();			
+				
+				System.out.println("Insert the price of your television: ");
+				int price = sc.nextInt();
+				
+				System.out.println("Insert the dimensions of your television: ");
+				int dimensions = sc.nextInt();
+				
+				System.out.println("Your tv is smart?: ");
+				boolean smart = sc.nextBoolean();
+				
+				Television userTv = new Television(name, description, price, dimensions, smart);
+				
+				arrayTv[x] = userTv;
+			}
+			System.out.println(Arrays.toString(arrayTv));
 		}
 		
 		if (userAnswer.toLowerCase().equals("headphones")) {
-			System.out.println("hola");
+			
+			Headphones[] arrayHeadphones = new Headphones[3];
+			
+			for (int x = 0; x < arrayHeadphones.length; x++) {
+				
+				System.out.println("Insert the name of your headphones: ");
+				String name = sc.nextLine();
+				
+				sc.nextLine();
+				
+				System.out.println("Insert the description of your headphones: ");
+				String description = sc.nextLine();			
+				
+				System.out.println("Insert the price of your headphones: ");
+				int price = sc.nextInt();
+				
+				System.out.println("Insert the color of your headphones: ");
+				String color = sc.nextLine();
+				
+				System.out.println("Your headphones is wireless?: ");
+				boolean wireless = sc.nextBoolean();
+				
+				Headphones userHeadphones = new Headphones(name, description, price, color, wireless);
+				
+				arrayHeadphones[x] = userHeadphones;
+			}
+			System.out.println(Arrays.toString(arrayHeadphones));
 		}
 	}
 }
